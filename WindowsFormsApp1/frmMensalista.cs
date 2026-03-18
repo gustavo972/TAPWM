@@ -47,9 +47,24 @@ namespace WindowsFormsApp1
             mensalista.SalarioMensal = Convert.ToDouble(txtSalarioMensal.Text);
 
             MessageBox.Show("Nome = " + mensalista.NomeEmpregado +
-                "\n Matricula = " + mensalista.Matricula +
-                "\n Tempo Trabalho = " + mensalista.TempoTrabalho() +
-                "\n Salario FInal = " + mensalista.SalarioBruto().ToString("N2"));
+                "\nMatricula = " + mensalista.Matricula +
+                "\nTempo Trabalho = " + mensalista.TempoTrabalho() +
+                "\nSalario FInal = " + mensalista.SalarioBruto().ToString("N2"));
+        }
+
+        private void btnInstanciarMensalistaParametro_Click(object sender, EventArgs e)
+        {
+            Mensalista mensalista = new Mensalista(
+                txtNome.Text,
+                Convert.ToInt32(txtMatricula.Text),
+                Convert.ToDateTime(txtDataEntradaEmpresa.Text),
+                Convert.ToDouble(txtSalarioMensal.Text)
+                );
+
+            MessageBox.Show("Nome = " + mensalista.NomeEmpregado +
+                "\nMatricula = " + mensalista.Matricula +
+                "\nTempo Trabalho = " + mensalista.TempoTrabalho() +
+                "\nSalario FInal = " + mensalista.SalarioBruto().ToString("N2"));
         }
     }
 }
