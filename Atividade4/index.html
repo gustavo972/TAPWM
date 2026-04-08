@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel ou Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pedra, Papel ou Tesoura</h1>
+            <p>Faça sua escolha para jogar contra o computador</p>
+        </header>
+
+        <div class="choices">
+            <button class="choice-btn" onclick="play(1)" aria-label="Escolher Pedra">
+                <span class="icon">🌑</span>
+                <span class="label">Pedra</span>
+            </button>
+            <button class="choice-btn" onclick="play(2)" aria-label="Escolher Papel">
+                <span class="icon">📄</span>
+                <span class="label">Papel</span>
+            </button>
+            <button class="choice-btn" onclick="play(3)" aria-label="Escolher Tesoura">
+                <span class="icon">✂️</span>
+                <span class="label">Tesoura</span>
+            </button>
+        </div>
+
+        <div class="battlefield">
+            <div class="player">
+                <h2>Você</h2>
+                <div id="user-choice" class="battle-icon">❓</div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="player">
+                <h2>Computador</h2>
+                <div id="computer-choice" class="battle-icon">❓</div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <h3 id="result" class="result-text">Faça uma escolha para começar!</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
