@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Filme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pesquisa de Público do Novo Filme</h1>
+
+    <div class="form-card">
+        <h2>Adicionar Resposta (<span id="participantCount">0</span>/45)</h2>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label>Sua Idade:</label>
+                <input type="number" id="idade" min="1" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Qual o seu sexo?</label>
+                <select id="sexo" required>
+                    <option value="">Escolha...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>O que achou do filme?</label>
+                <select id="opiniao" required>
+                    <option value="">Escolha...</option>
+                    <option value="4">Ótimo (4)</option>
+                    <option value="3">Bom (3)</option>
+                    <option value="2">Regular (2)</option>
+                    <option value="1">Péssimo (1)</option>
+                </select>
+            </div>
+            
+            <button type="submit" id="submitBtn">Salvar Avaliação</button>
+        </form>
+    </div>
+
+    <h2>Dados Analisados</h2>
+    <div id="results" class="result-card">
+        <p class="empty-state">Sem dados para analisar.</p>
+    </div>
+    
+    <h2>Histórico das Avaliações</h2>
+    <div class="table-container">
+        <table class="data-table" id="dataTable">
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4" class="empty-state">Nenhum registro ainda</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
