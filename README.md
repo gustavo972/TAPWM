@@ -29,6 +29,20 @@ Aplicação front-end simples para consolidar lógica de manipulação de dados 
 - Imprime as médias instantâneas, encontra o participante listado mais velho e também o mais novo. Destaca com totalizadores a aprovação visual dessa demografia.
 - Trabalha somente em Memória Volátil de tempo de execução, apagando após qualquer reload (F5).
 
+### 📐 [Atividade 6 - Verificador de Triângulos](./Atividade6/)
+Aplicação web para verificar a existência de um triângulo com base em seus 3 lados e classificá-lo.
+- Recebe os três lados e realiza uma validação com `isNaN()` para impedir entradas incorretas.
+- Aplica a condição de existência matemática (`|b - c| < a < b + c`, etc.).
+- Classifica o resultado final como Equilátero, Isósceles ou Escaleno.
+
+### ⚙️ [Atividade 7 - Funções JavaScript](./Atividade7/)
+Página de testes focada em consolidar a criação e uso de funções básicas e úteis em JavaScript, com 5 desafios distintos:
+- **Maior de Três:** Retorna o maior de 3 números.
+- **Ordem Crescente:** Ordena 3 números do menor para o maior.
+- **Palíndromo:** Verifica se uma frase é igual de trás pra frente (removendo espaços).
+- **Subconjunto:** Verifica se a segunda string está contida na primeira com `.includes()`.
+- **Dia da Semana:** Recebe uma data e exibe o respectivo dia (ex: Segunda-feira).
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas

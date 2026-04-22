@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7 - Funções JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Testador de Funções JS</h1>
+            <p>Atividade 7 - Teste as 5 funções exigidas individualmente.</p>
+        </header>
+
+        <div class="grid-layout">
+            <!-- 1. Maior de Três -->
+            <div class="card">
+                <h3>1. Maior de Três</h3>
+                <div class="inputs-row">
+                    <input type="number" id="maiorNum1" placeholder="Núm 1">
+                    <input type="number" id="maiorNum2" placeholder="Núm 2">
+                    <input type="number" id="maiorNum3" placeholder="Núm 3">
+                </div>
+                <button id="btnMaior">Verificar Maior</button>
+                <div id="resMaior" class="result"></div>
+            </div>
+
+            <!-- 2. Ordem Crescente -->
+            <div class="card">
+                <h3>2. Ordem Crescente</h3>
+                <div class="inputs-row">
+                    <input type="number" id="ordemNum1" placeholder="Núm 1">
+                    <input type="number" id="ordemNum2" placeholder="Núm 2">
+                    <input type="number" id="ordemNum3" placeholder="Núm 3">
+                </div>
+                <button id="btnOrdem">Ordenar</button>
+                <div id="resOrdem" class="result"></div>
+            </div>
+
+            <!-- 3. Validador de Palíndromo -->
+            <div class="card">
+                <h3>3. Palíndromo</h3>
+                <input type="text" id="palindromoStr" placeholder="Digite uma palavra ou frase">
+                <button id="btnPalindromo">Verificar Palíndromo</button>
+                <div id="resPalindromo" class="result"></div>
+            </div>
+
+            <!-- 4. Verificador de Subconjunto -->
+            <div class="card">
+                <h3>4. Verificador de Subconjunto</h3>
+                <input type="text" id="subPalavra1" placeholder="Primeira Palavra (Texto Principal)">
+                <input type="text" id="subPalavra2" placeholder="Segunda Palavra (A ser buscada)">
+                <button id="btnSubconjunto">Verificar Subconjunto</button>
+                <div id="resSubconjunto" class="result"></div>
+            </div>
+
+            <!-- 5. Dia da Semana -->
+            <div class="card">
+                <h3>5. Dia da Semana</h3>
+                <input type="date" id="dataInput">
+                <button id="btnData">Obter Dia da Semana</button>
+                <div id="resData" class="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

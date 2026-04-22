@@ -1,0 +1,178 @@
+/* Reset Básico e Variáveis */
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --error-color: #ef4444;
+    --error-bg: rgba(239, 68, 68, 0.1);
+    --success-color: #10b981;
+    --success-bg: rgba(16, 185, 129, 0.1);
+    --border-radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Principal */
+.container {
+    background-color: var(--card-bg);
+    max-width: 480px;
+    width: 100%;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Formulário */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+input[type="number"]::placeholder {
+    color: #475569;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Área de Resultado */
+.result-container {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.result-container.hidden {
+    display: none;
+}
+
+.result-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.result-container p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.result-container.success {
+    background-color: var(--success-bg);
+    border: 1px solid var(--success-color);
+}
+
+.result-container.success h2 {
+    color: var(--success-color);
+}
+
+.result-container.success p {
+    color: #a7f3d0;
+}
+
+.result-container.error {
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-color);
+}
+
+.result-container.error h2 {
+    color: var(--error-color);
+}
+
+.result-container.error p {
+    color: #fecaca;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
