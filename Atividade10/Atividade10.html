@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+<body>
+    <h1>Atividade 10</h1>
+</body>
+    <script>
+        var aluno1 = new Object();
+        aluno1.ra = 1234567890;
+        aluno1.nome = "João";
+        alert("RA: " + aluno1.ra + "\nNome: " + aluno1.nome);
+
+        var aluno2 = new Object();
+        aluno2.ra = 1234567891;
+        aluno2.nome = "Maria";
+
+        alert("RA: " + aluno2.ra + "\nNome: " + aluno2.nome);
+        
+        aluno2["email"] = "maria@gmail.com";
+        alert("Email: " + aluno2["email"]);
+
+        var aluno3 = {
+            ra: 1234567892,
+            nome: "Pedro",
+            email: "pedro@gmail.com"
+        };
+        alert("RA: " + aluno3.ra + "\nNome: " + aluno3.nome + "\nEmail: " + aluno3.email);
+
+        function Aluno(ra, nome) {
+            this.ra = ra;
+            this.nome = nome;
+            this.ShowData = function() {
+                alert("RA: " + this.ra + "\nNome: " + this.nome);
+            }
+        }
+        var aluno4 = new Aluno(1234567893, "Ana");
+        aluno4.ShowData();
+        alert(aluno4.nome);
+
+        function Aluno1(ra, nome) {
+            this.ra = ra;
+            this.nome = nome;
+            this.setRa = function(ra) {
+                this.ra = ra;
+            }
+            this.setNome = function(nome) {
+                this.nome = nome;
+            }
+            this.getRa = function() {
+                return this.ra;
+            }
+            this.getNome = function() {
+                return this.nome;
+            }
+        }
+        var aluno5 = new Aluno1();
+        aluno5.setRa(1234567895);
+        aluno5.setNome("João");
+        alert("RA: " + aluno5.getRa() + "\nNome: " + aluno5.getNome());
+
+        function AlunoADS() {
+            var numLab;
+            this.setNumLab = function(numLab) {
+                this.numLab = numLab;
+            }
+            this.getNumLab = function() {
+                return this.numLab;
+            }
+        }
+        var aluno6 = new AlunoADS();
+        aluno6.setNumLab(1);
+        alert("Número do Laboratório: " + aluno6.getNumLab());
+
+        AlunoADS.prototype = new Aluno1();
+
+        var aluno7 = new AlunoADS();
+        aluno7.setRa(1234567896);
+        aluno7.setNome("Maria");
+        aluno7.setNumLab(1);
+        alert("RA: " + aluno7.getRa() + "\nNome: " + aluno7.getNome() + "\nNúmero do Laboratório: " + aluno7.getNumLab());
+
+        var objAluno = new Aluno1();
+        objAluno.setRa(1234567897);
+        objAluno.setNome("João");
+        alert("RA: " + objAluno.getRa() + "\nNome: " + objAluno.getNome());
+
+        class AlunoADS1 extends Aluno1 {
+            constructor() {
+                super();
+                this._numLab;
+            }
+            setNumLab(numLab) {
+                this._numLab = numLab;
+            }
+            getNumLab() {
+                return this._numLab;
+            }
+        }
+        var objAlunoADS = new AlunoADS1();
+        objAlunoADS.setRa(1234567898);
+        objAlunoADS.setNome("Maria");
+        objAlunoADS.setNumLab(1);
+        alert("RA: " + objAlunoADS.getRa() + "\nNome: " + objAlunoADS.getNome() + "\nNúmero do Laboratório: " + objAlunoADS.getNumLab());
+    
+        var obj1 = new Object();
+        var obj2 = obj1;
+        obj1.nome = "João";
+        alert("Nome: " + obj2.nome);
+
+        class ContaBancaria {
+            #cpf;
+
+            constructor(nome, saldo) {
+                this.nome = nome;
+                this.saldo = saldo;
+            }
+            setCpf(cpf) {
+                this.#cpf = cpf;
+            }
+            getCpf() {
+                return this.#cpf;
+            }
+            setNome(nome) {
+                this.nome = nome;
+            }
+            getNome() {
+                return this.nome;
+            }
+            setSaldo(saldo) {
+                this.saldo = saldo;
+            }
+            getSaldo() {
+                return this.saldo;
+            }
+            depositar(valor) {
+                this.saldo += valor;
+                this.#registrarTransacao("Depósito", valor);
+            }
+            #registrarTransacao(tipo, valor) {
+                console.log("Deposito de " + valor + " realizado com sucesso pelo cliente " + this.nome + " com o CPF " + this.#cpf);
+            }
+        }
+        var objConta = new ContaBancaria("João", 1000);
+        objConta.setCpf("1234567890");
+        objConta.depositar(100);        
+    </script>
+</html>
