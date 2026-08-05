@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Principal - Atividade 14</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="form-header">
+      <h1>Formulário Principal</h1>
+      <p class="subtitle">Preencha os campos abaixo para enviar suas informações.</p>
+    </header>
+
+    <form name="formularioPrincipal" id="formularioPrincipal" onsubmit="return validar()" novalidate>
+      
+      <div class="form-group">
+        <label for="nome" class="field-label">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name">
+        <small class="hint">Mínimo de 10 caracteres.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="field-label">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="comentario" class="field-label">Comentário:</label>
+        <textarea id="comentario" name="comentario" rows="4" placeholder="Escreva seu comentário..."></textarea>
+        <small class="hint">Mínimo de 20 caracteres.</small>
+      </div>
+
+      <fieldset class="survey-section">
+        <legend class="field-label">Pesquisa:</legend>
+        <p class="survey-question">Primeira vez nesta página?</p>
+        <div class="radio-options">
+          <label class="radio-label">
+            <input type="radio" name="primeiraVez" id="pesquisaSim" value="Sim">
+            <span>Sim</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="primeiraVez" id="pesquisaNao" value="Não">
+            <span>Não</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-submit" id="btnEnviar">Enviar</button>
+        <button type="reset" class="btn btn-reset" id="btnLimpar">Limpar</button>
+      </div>
+
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

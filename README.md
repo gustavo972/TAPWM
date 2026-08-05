@@ -43,6 +43,13 @@ Página de testes focada em consolidar a criação e uso de funções básicas e
 - **Subconjunto:** Verifica se a segunda string está contida na primeira com `.includes()`.
 - **Dia da Semana:** Recebe uma data e exibe o respectivo dia (ex: Segunda-feira).
 
+### 📋 [Atividade 14 - Formulário Principal e Validação JS](./Atividade14/)
+Página HTML contendo formulário e validação completa em JavaScript acionada no evento `onsubmit`.
+- **Campos:** Nome (min 10 caracteres), E-mail (`type="email"`), Comentário (min 20 caracteres) e Pesquisa (Radio Buttons obrigatórios).
+- **Acesso ao DOM:** Utiliza obrigatoriamente a sintaxe `document.nomeDoFormulario.elements[]`.
+- **Mensagem Personalizada:** Exibe alerta interativo de feedback via `alert()` conforme a resposta da pesquisa ("Sim" / "Não").
+
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
