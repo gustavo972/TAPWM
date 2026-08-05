@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos Fatec Sorocaba - Atividade 15</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="header">
+      <span class="badge">Fatec Sorocaba</span>
+      <h1>Guia de Cursos de Graduação</h1>
+      <p class="instruction">Selecione um curso na caixa abaixo para visualizar informações detalhadas em uma nova janela.</p>
+    </header>
+
+    <div class="select-card">
+      <label for="selectCurso" class="select-label">Curso:</label>
+      <select id="selectCurso" name="selectCurso" class="custom-select" onchange="tratarSelecaoCurso(this)">
+        <option value="" selected disabled>-- Selecione um curso --</option>
+        <option value="ads">Análise e Desenvolvimento de Sistemas (ADS)</option>
+        <option value="dsm">Desenvolvimento de Software Multiplataforma (DSM)</option>
+        <option value="bd">Banco de Dados (BD)</option>
+        <option value="ge">Gestão Empresarial (GE)</option>
+        <option value="log">Logística (LOG)</option>
+        <option value="fm">Fabricação Mecânica (FM)</option>
+        <option value="pm">Projetos Mecânicos (PM)</option>
+        <option value="pol">Polímeros (POL)</option>
+        <option value="sb">Sistemas Biomédicos (SB)</option>
+      </select>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
